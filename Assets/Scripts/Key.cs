@@ -1,19 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
+using Fungus;
 using UnityEngine;
 
 namespace Cheryl
 {
     public class Key : MonoBehaviour,IInteraction
     {
+        [SerializeField, Header("Fungus_互動物件說明")]
+        private Flowchart flowchartobject;
+        [SerializeField, Header("撿取音效")]
+        private AudioClip soundPickUp;
+
+
+        private string flowchatMessage = "鑰匙_A";
+        private AudioSource aud;
         private Rigidbody rig;
         private Collider col;
         private bool isPickUp;
+        public bool pickUp=>isPickUp;
 
         private void Awake()
         {
             rig = GetComponent<Rigidbody>();
             col = GetComponent<Collider>();
+            aud = GetComponent<AudioSource>();
+
         }
         // Start is called before the first frame update
         public void Interaction()
@@ -30,6 +41,9 @@ namespace Cheryl
             rig.isKinematic = true;
             col.enabled=false;
             transform.position = new Vector3(0, 0, -200);
+            aud.PlayOneShot(soundPickUp);
+            flowchartobject.SendFungusMessage(flowchatMessage);
+
         }
     }
 }
