@@ -16,8 +16,8 @@ namespace Cheryl
         private AudioSource aud;
         private Rigidbody rig;
         private Collider col;
-        private bool isPickUp;
-        public bool pickUp=>isPickUp;
+        private bool isPickup;
+        public bool pickup=>isPickup;
 
         private void Awake()
         {
@@ -37,7 +37,7 @@ namespace Cheryl
         public void Pickup()
         {
             print($"<color=#37f>撿取:{name}</color>");
-            isPickUp=true;
+            isPickup=true;
             rig.isKinematic = true;
             col.enabled=false;
             transform.position = new Vector3(0, 0, -200);
