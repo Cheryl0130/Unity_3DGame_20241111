@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "\u908A\u6846\u6548\u679C_\u9EC3\u8272_\u8DDD\u96E2_3.5"
+  m_Name: "\u908A\u6846\u6548\u679C_\u9EC3\u8272_\u8DDD\u96E2_0.01"
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 2d5c13c28498d4541a2bc8ff4b01e157, type: 2}
   m_ModifiedSerializedProperties: 0
